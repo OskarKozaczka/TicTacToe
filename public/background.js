@@ -11,8 +11,8 @@ const totalX = 20;
 
 for (let i = 0; i < totalX; i++) {
 	var Sprite;
-	if (Math.random() < 0.5) Sprite = PIXI.Sprite.from('../assets/X.png');
-	else Sprite = PIXI.Sprite.from('../assets/O.png');
+	if (Math.random() < 0.5) Sprite = PIXI.Sprite.from('./assets/X.png');
+	else Sprite = PIXI.Sprite.from('./assets/O.png');
 	Sprite.anchor.set(0.5);
 	Sprite.scale.set(0.8 + Math.random() * 0.3);
 	Sprite.x = Math.random() * app.screen.width;
