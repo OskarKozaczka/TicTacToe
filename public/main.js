@@ -36,7 +36,7 @@ var PossibleWins = [
 	[3, 5, 7],
 ];
 
-var path = none;
+var path = "";
 
 function CheckForWin(Turn) {
 	return PossibleWins.some((possibility) => {

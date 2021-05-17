@@ -129,3 +129,11 @@ input[type='button'] {
 	transition-duration: 1s;
 	stroke: rgb(47, 224, 255);
 }
+
+#Background {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
