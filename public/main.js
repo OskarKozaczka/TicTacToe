@@ -52,13 +52,11 @@ function CheckForDraw() {
 }
 
 function Draw() {
-	//document.querySelector('.board').style.display = 'none';
 	document.querySelector('.EndScreen').style.display = 'block';
 	document.querySelector('.EndText').innerText = 'Draw!';
 }
 
 function Win(x) {
-	//document.querySelector('.board').style.display = 'none';
 	document.querySelector('.EndScreen').style.display = 'block';
 	if (x == '.X') document.querySelector('.EndText').innerText = 'X is a winner!';
 	else document.querySelector('.EndText').innerText = 'O is a winner!';
