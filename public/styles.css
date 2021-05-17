@@ -8,10 +8,6 @@ body {
 	align-items: center;
 }
 
-canvas {
-	border: 1px dashed black;
-}
-
 .square {
 	background-color: black;
 	width: 33%;
