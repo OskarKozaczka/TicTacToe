@@ -15,9 +15,5 @@
 		"url": "git+https://github.com/OskarKozaczka/TicTacToe.git"
 	},
 	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/OskarKozaczka/TicTacToe/issues"
-	},
-	"homepage": "https://github.com/OskarKozaczka/TicTacToe#readme"
+	"license": "ISC"
 }
