@@ -1,0 +1,131 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgba(24, 24, 24, 0.973);
+	justify-content: center;
+	align-items: center;
+}
+
+canvas {
+	border: 1px dashed black;
+}
+
+.square {
+	background-color: black;
+	width: 33%;
+	height: 33%;
+	float: left;
+	position: relative;
+	border-style: solid;
+	border-color: rgb(47, 224, 255);
+	box-sizing: border-box;
+	border-width: 2px;
+	align-items: center;
+}
+
+.board {
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	margin-top: 5%;
+}
+
+.EndScreen {
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	position: relative;
+	display: none;
+}
+.O {
+	stroke: rgb(255, 255, 255);
+	stroke-width: 12px;
+	height: 0px;
+	display: block;
+}
+
+.X {
+	stroke: rgb(255, 255, 255);
+	stroke-width: 12px;
+	display: block;
+	height: 0px;
+}
+
+.Xe {
+	stroke: rgb(255, 255, 255);
+	stroke-width: 12px;
+	display: inherit;
+	position: absolute;
+	height: 33%;
+	width: 33%;
+	margin: auto;
+	top: 100px;
+	left: 100px;
+}
+
+.Oe {
+	stroke: rgb(255, 255, 255);
+	stroke-width: 12px;
+	display: inherit;
+	position: absolute;
+	height: 33%;
+	width: 33%;
+	margin: auto;
+	top: 100px;
+	left: 100px;
+}
+.EndText {
+	font-size: x-large;
+	color: rgb(255, 255, 255);
+	display: inherit;
+	margin: auto;
+	margin-top: 5%;
+	text-align: center;
+}
+
+path {
+	stroke-dasharray: 200px;
+	stroke-dashoffset: 200px;
+	transition-property: stroke-dashoffset;
+	transition: cubic-bezier(0.47, 0, 0.745, 0.715);
+	transition-duration: 0.5s;
+}
+
+input[type='button'] {
+	text-align: center;
+	margin: auto;
+	display: block;
+	margin-top: 3%;
+	background-color: #ffffff; /* Green */
+	border: none;
+	color: rgb(0, 0, 0);
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.EndLine {
+	z-index: 1;
+	position: relative;
+	stroke: rgb(255, 255, 255);
+	stroke-width: 12px;
+	display: inline-block;
+	top: -300px;
+	height: 0px;
+	width: 300;
+}
+
+.EndLinePath {
+	stroke-width: 10px;
+	stroke-dashoffset: 300px;
+	stroke-dasharray: 300px;
+	transition-duration: 1s;
+	stroke: rgb(47, 224, 255);
+}
