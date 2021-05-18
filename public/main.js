@@ -1,3 +1,24 @@
+for (var i = 0; i < 9; i++) {
+	var square = document.createElement('div');
+	square.classList.add('square');
+	var svgO = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+	svgO.classList.add('O');
+	var PathO = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+	PathO.setAttribute('d', 'M 18,48 a 23,23 0 1,1 60,0a 23,23 0 1,1 -60,0');
+	var svgX = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+	svgX.classList.add('X');
+	var PathX1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+	PathX1.setAttribute('d', 'M16,16L80,80');
+	var PathX2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+	PathX2.setAttribute('d', 'M80,16L16,80');
+
+	document.querySelector('.board').prepend(square);
+	square.append(svgO);
+	square.append(svgX);
+	svgO.append(PathO);
+	svgX.append(PathX1);
+	svgX.append(PathX2);
+}
 const squares = document.querySelectorAll('.square');
 
 squares.forEach((square) => {
@@ -9,7 +30,6 @@ var Turn = '.X';
 function SquareClick(e) {
 	if (CheckForDraw() == false && CheckForWin('.O') == false && CheckForWin('.X') == false) {
 		this.querySelector(Turn).style.height = '100px';
-		this.querySelector(Turn).style.display = 'block';
 		this.querySelector(Turn).querySelectorAll('path')[0].style.strokeDashoffset = 0;
 		setTimeout(
 			function (x) {
@@ -36,19 +56,19 @@ var PossibleWins = [
 	[3, 5, 7],
 ];
 
-var path = "";
+var path = '';
 
 function CheckForWin(Turn) {
 	return PossibleWins.some((possibility) => {
 		return possibility.every((index) => {
 			path = possibility;
-			return squares[index - 1].querySelector(Turn).style.display == 'block';
+			return squares[index - 1].querySelector(Turn).style.height == '100px';
 		});
 	});
 }
 
 function CheckForDraw() {
-	return document.querySelectorAll("[style =  'height: 100px; display: block;']").length == 9;
+	return document.querySelectorAll("[style =  'height: 100px;']").length == 9;
 }
 
 function Draw() {
@@ -62,14 +82,14 @@ function Win(x) {
 	else document.querySelector('.EndText').innerText = 'O is a winner!';
 	document.querySelector('.EndLine').style.height = '300px';
 	document.querySelector('.EndLine').firstChild.style.strokeDashoffset = 0;
-	Path();
+	EndPath();
 }
 
 function restart() {
 	location.reload();
 }
 
-function Path() {
+function EndPath() {
 	var startx = ((path[0] - 1) % 3) * 100 + 50;
 	var starty = 100 * Math.round((path[0] - 1) / 3 - 0.5) + 50;
 	var start = 'M' + startx.toString() + ',' + starty.toString();

@@ -44,6 +44,7 @@ body {
 	stroke-width: 12px;
 	height: 0px;
 	display: block;
+	width: 100px;
 }
 
 .X {
@@ -51,6 +52,7 @@ body {
 	stroke-width: 12px;
 	display: block;
 	height: 0px;
+	width: 100px;
 }
 
 .Xe {
@@ -91,6 +93,9 @@ path {
 	transition-property: stroke-dashoffset;
 	transition: cubic-bezier(0.47, 0, 0.745, 0.715);
 	transition-duration: 0.5s;
+	height: 100px;
+	width: 100px;
+	display: block;
 }
 
 input[type='button'] {
@@ -98,7 +103,7 @@ input[type='button'] {
 	margin: auto;
 	display: block;
 	margin-top: 3%;
-	background-color: #ffffff; /* Green */
+	background-color: #ffffff;
 	border: none;
 	color: rgb(0, 0, 0);
 	padding: 15px 32px;
